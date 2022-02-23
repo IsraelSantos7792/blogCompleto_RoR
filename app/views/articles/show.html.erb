@@ -5,7 +5,11 @@
 <p>Arquivo atualizado em: <%= @article.updated_at %></p>
 
 <ul>
-  <%= link_to 'Editar', edit_article_path(@article)%>
-  <%= link_to 'Voltar', root_path %>
+  <li><%= link_to 'Excluir', article_path(@article),
+    method: :delete,
+    data: { confirm: 'Voce tem certeza?' }
+  %></li>
+  <li><%= link_to 'Editar', edit_article_path(@article)%></li>
+  <li><%= link_to 'Voltar', root_path %></li>
 </ul>
 
