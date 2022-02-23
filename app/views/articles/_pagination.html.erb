@@ -1,4 +1,5 @@
 <nav class="blog-pagination" aria-label="Pagination">
-  <a class="btn btn-outline-primary" href="#">Older</a>
-  <a class="btn btn-outline-secondary disabled">Newer</a>
+  <%= link_to_next_page @articles, 'Antigos', class: 'btn btn-outline-primary'%>
+  <%= link_to_previous_page @articles, 'Novos', class: 'btn btn-outline-primary'%>
 </nav>
+
