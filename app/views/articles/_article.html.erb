@@ -1,0 +1,14 @@
+<article class="blog-post">
+  <h2 class="blog-post-title"><%= article.title %></h2>
+  <p class="blog-post-meta"> <%= month_day_comma_year(article.created_at) %> by <a href="#">Chris</a></p>
+
+  <p><%= truncate(article.body, length: 150) %></p>
+  <p><%= link_to 'Ler mais...', article, class: "btn btn-link" %></p>
+
+  <%= link_to 'Excluir', article_path(article),
+    method: :delete,
+    data: { confirm: 'Voce tem certeza?' }, 
+    class: "btn btn-danger"%>
+  <%= link_to 'Editar', edit_article_path(article), 
+    class: "btn btn-secondary"%>
+</article>  
