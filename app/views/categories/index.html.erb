@@ -15,9 +15,9 @@
       <tr>
         <td><%= category.name %></td>
         <td>
-          <%= link_to 'Show', category %>
-          <%= link_to 'Edit', edit_category_path(category) %>
-          <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%# <%= link_to 'Mostrar', category , class: "btn btn-outline-secondary" %> 
+          <%= link_to 'Editar', edit_category_path(category) , class: "btn btn-outline-secondary" %>
+          <%= link_to 'Deletar', category, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger" %>
         </td>
       </tr>
     <% end %>
