@@ -1,5 +1,6 @@
 # controller articles index and more
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
@@ -14,11 +15,11 @@ class ArticlesController < ApplicationController
   def show; end
 
   def new
-    @article = Article.new
+    @article = current_user.articles.new
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.new(article_params)
 
     if @article.save
       redirect_to @article, notice: "Artigo foi criado com sucesso."
