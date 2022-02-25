@@ -3,8 +3,12 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
+    @highlights = Article.desc_order.first(3)
     current_page = (params[:page] || 1).to_i
-    @articles = Article.order(created_at: :desc).page(current_page).per(2)
+    highlights_ids = @highlights.pluck(:id).join(',')
+    @articles = Article.desc_order
+                       .without_highlights(highlights_ids)
+                       .page(current_page)
   end
 
   def show; end
@@ -17,7 +21,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to @article
+      redirect_to @article, notice: "Artigo foi criado com sucesso."
     else
       render :new
     end
@@ -27,7 +31,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to @article, notice: "Artigo foi atualizado com sucesso."
     else
       render :edit
     end
@@ -36,7 +40,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
 
-    redirect_to root_path
+    redirect_to root_path , notice: "Artigo foi deletado com sucesso."
   end
 
   private
