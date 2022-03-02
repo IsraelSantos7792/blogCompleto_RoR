@@ -7,13 +7,15 @@ Blog | autenticação | front bootstrap | BD Sqlite
 
 ## Backend
 - Api Rails
-- Pundit
-- Devise
 - categorias de artigos
 - Sqlite
-- Rubocop -D
-- Rolify
-- bullet
+- GEM's
+  - Rubocop -D
+  - Rolify
+  - bullet
+  - grupdate
+  - Pundit
+  - Devise
 
 
 ## Front end
