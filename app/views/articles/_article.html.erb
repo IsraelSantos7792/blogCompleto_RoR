@@ -11,7 +11,7 @@
   <%= link_to 'Excluir', article_path(article),
     method: :delete,
     data: { confirm: 'Voce tem certeza?' }, 
-    class: "btn btn-danger"%>
+    class: "btn btn-danger" if policy(article).destroy? %>
   <%= link_to 'Editar', edit_article_path(article), 
-    class: "btn btn-secondary"%>
+    class: "btn btn-secondary" if policy(article).update? %>
 </article>  

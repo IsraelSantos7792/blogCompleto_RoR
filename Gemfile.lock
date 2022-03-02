@@ -136,6 +136,8 @@ GEM
     public_suffix (4.0.6)
     puma (5.6.2)
       nio4r (~> 2.0)
+    pundit (2.2.0)
+      activesupport (>= 3.0.0)
     racc (1.6.0)
     rack (2.2.3)
     rack-mini-profiler (2.3.3)
@@ -180,6 +182,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rolify (5.3.0)
     rubocop (1.25.1)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
@@ -264,8 +267,10 @@ DEPENDENCIES
   letter_opener (~> 1.7)
   listen (~> 3.3)
   puma (~> 5.0)
+  pundit (~> 2.2)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.6)
+  rolify (~> 5.0)
   rubocop
   sass-rails (>= 6)
   selenium-webdriver
