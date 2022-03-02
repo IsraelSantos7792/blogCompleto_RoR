@@ -13,6 +13,7 @@ Blog | autenticação | front bootstrap | BD Sqlite
 - Sqlite
 - Rubocop -D
 - Rolify
+- bullet
 
 
 ## Front end
