@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Blog | autenticação | front bootstrap | BD Sqlite 
 
-Things you may want to cover:
+- Projeto em desenvolvimento
 
-* Ruby version
 
-* System dependencies
+## Backend
+- Api Rails
+- Pundit
+- Devise
+- categorias de artigos
+- Sqlite
+- Rubocop -D
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Front end
+- Bootstrap
