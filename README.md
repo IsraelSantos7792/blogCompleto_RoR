@@ -21,3 +21,5 @@ Blog | autenticação | front bootstrap | BD Sqlite
 ## Front end
 - Bootstrap
 
+## Aplicação no Hereku
+https://blogstrapnew.herokuapp.com/
