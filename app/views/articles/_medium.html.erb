@@ -6,7 +6,7 @@
       <div class="mb-1 text-muted">
         <%= render 'article_detail', article: article %>
       </div>
-      <p><%= truncate(article.body, length: 100) %></p>
+      <p><%= truncate(article.body, length: 40) %></p>
       <%= link_to 'ler mais...', article, class: 'stretched-link'%>
     </div>
     <div class="col-auto d-none d-lg-block">
