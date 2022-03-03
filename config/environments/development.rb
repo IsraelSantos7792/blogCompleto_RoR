@@ -19,7 +19,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   # localtunnel
-  config.hosts << "ugly-walrus-87.loca.lt"
+  config.hosts << "nasty-mouse-82.loca.lt"
 
 
   # Do not eager load code on boot.
